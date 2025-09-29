@@ -1,1 +1,1 @@
-Fiz a atividade até o slide 54
+Finalizei os slides, porém o código está com alguns erros não resolvidos
