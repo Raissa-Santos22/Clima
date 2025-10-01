@@ -6,24 +6,23 @@ document.querySelector('.busca').addEventListener('submit', async (event) =>{
     if(input !== ""){
         showWarning("Carregando ...") 
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ encodeURI(input)}&appid=9066d9394303a3245ed0ecc466186c25&units=metrics&lang=pt_br` // variável que vai guardar os dados da API
-    let results = await fetch(url)
-    let json = await results.json 
+        let results = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=
+        ${ encodeURI(input)}&appid=9066d9394303a3245ed0ecc466186c25&units=metrics&lang=pt_br`) // variável que vai guardar os dados da API
+             let json = await results.json();
 
-    if(json.cod == 200){
-        showInfo(({
+        if(json.cod ==200){
+        showInfo({
             name:json.name,
             country:json.sys.country,
             temp:json.main.temp,
             tempIcon:json.weather[0].icon,
             windSpeed:json.wind.speed,
             windAngle:json.wind.deg
-        }))
+        })
 
-    }else{
-        showWarning("Não encontramos essa localização...")
-    }
-
+        }else{
+             showWarning("Não encontramos essa localização...")
+        }
     }else{
 
     }
