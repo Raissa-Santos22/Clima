@@ -1,1 +1,1 @@
-Finalizei os slides, porém o código está com alguns erros não resolvidos
+Finalizei os slides, porém o código está com alguns erros não identificados
